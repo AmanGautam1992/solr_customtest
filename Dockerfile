@@ -19,7 +19,7 @@ ENV SOLR_USER="solr" \
     SOLR_SHA256="a41594888a30394df8819c36ceee727dd2ed0a7cd18b41230648f1ef1a8b0cd2" \
     SOLR_KEYS="2085660D9C1FCCACC4A479A3BF160FF14992A24C" \
     PATH="/opt/solr/bin:/opt/docker-solr/scripts:$PATH" \
-	SOLR_Path = "/opt/solr/server/solr/lib /opt/solr"
+	SOLR_Path = "/opt/solr/server/solr"
 
 RUN groupadd -r --gid $SOLR_GID $SOLR_GROUP && \
   useradd -r --uid $SOLR_UID --gid $SOLR_GID $SOLR_USER
