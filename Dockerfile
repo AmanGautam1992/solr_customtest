@@ -61,77 +61,77 @@ COPY scripts /opt/docker-solr/scripts
 RUN chown -R $SOLR_USER:$SOLR_GROUP /opt/docker-solr
 
 # Adding sitecore_master_index core
-RUN cp -af sitecore_master_index $SOLR_PATH/sitecore_master_index
+COPY sitecore_master_index $SOLR_PATH/sitecore_master_index
 #COPY schema.xml $SOLR_PATH/sitecore_master_index/conf/
 RUN echo name=sitecore_master_index > $SOLR_PATH/sitecore_master_index/core.properties
 
 # Adding sitecore_web_index core
-RUN cp -af $SOLR_PATH/configsets/basic_configs $SOLR_PATH/sitecore_web_index
+COPY sitecore_web_index $SOLR_PATH/sitecore_web_index
 #COPY schema.xml $SOLR_PATH/sitecore_web_index/conf/
 RUN echo name=sitecore_web_index > $SOLR_PATH/sitecore_web_index/core.properties
 
 # Adding sitecore_core_index core
-RUN cp -af sitecore_core_index $SOLR_PATH/sitecore_core_index
+COPY sitecore_core_index $SOLR_PATH/sitecore_core_index
 #COPY schema.xml $SOLR_PATH/sitecore_core_index/conf/
 RUN echo name=sitecore_core_index > $SOLR_PATH/sitecore_core_index/core.properties
 
 # Adding sitecore_fxm_master_index core
-RUN cp -af sitecore_fxm_master_index $SOLR_PATH/sitecore_fxm_master_index
+COPY sitecore_fxm_master_index $SOLR_PATH/sitecore_fxm_master_index
 #COPY schema.xml $SOLR_PATH/sitecore_fxm_master_index/conf/
 RUN echo name=sitecore_fxm_master_index > $SOLR_PATH/sitecore_fxm_master_index/core.properties
 
 # Adding sitecore_fxm_web_index core
-RUN cp -af sitecore_fxm_web_index $SOLR_PATH/sitecore_fxm_web_index
+COPY sitecore_fxm_web_index $SOLR_PATH/sitecore_fxm_web_index
 #COPY schema.xml $SOLR_PATH/sitecore_fxm_master_index/conf/
 RUN echo name=sitecore_fxm_web_index > $SOLR_PATH/sitecore_fxm_web_index/core.properties
 
 # Adding sitecore_list_index core
-RUN cp -af sitecore_list_index $SOLR_PATH/sitecore_list_index
+COPY sitecore_list_index $SOLR_PATH/sitecore_list_index
 #COPY schema.xml $SOLR_PATH/sitecore_list_index/conf/
 RUN echo name=sitecore_list_index > $SOLR_PATH/sitecore_list_index/core.properties
 
 # Adding sitecore_marketing_asset_index_master core
-RUN cp -af sitecore_list_index $SOLR_PATH/sitecore_marketing_asset_index_master
+COPY sitecore_list_index $SOLR_PATH/sitecore_marketing_asset_index_master
 #COPY schema.xml $SOLR_PATH/sitecore_marketing_asset_index_master/conf/
 RUN echo name=sitecore_marketing_asset_index_master > $SOLR_PATH/sitecore_marketing_asset_index_master/core.properties
 
 # Adding sitecore_marketing_asset_index_web core
-RUN cp -af sitecore_marketing_asset_index_web $SOLR_PATH/sitecore_marketing_asset_index_web
+COPY sitecore_marketing_asset_index_web $SOLR_PATH/sitecore_marketing_asset_index_web
 #COPY schema.xml $SOLR_PATH/sitecore_marketing_asset_index_web/conf/
 RUN echo name=sitecore_marketing_asset_index_web > $SOLR_PATH/sitecore_marketing_asset_index_web/core.properties
 
 # Adding sitecore_marketingdefinitions_web core
-RUN cp -af sitecore_marketingdefinitions_web $SOLR_PATH/sitecore_marketingdefinitions_web
+COPY sitecore_marketingdefinitions_web $SOLR_PATH/sitecore_marketingdefinitions_web
 #COPY schema.xml $SOLR_PATH/sitecore_marketingdefinitions_web/conf/
 RUN echo name=sitecore_marketingdefinitions_web > $SOLR_PATH/sitecore_marketingdefinitions_web/core.properties
 
 # Adding sitecore_master_index_sec core
-RUN cp -af sitecore_master_index_sec $SOLR_PATH/sitecore_master_index_sec
+COPY sitecore_master_index_sec $SOLR_PATH/sitecore_master_index_sec
 #COPY schema.xml $SOLR_PATH/sitecore_fxm_master_index/conf/
 RUN echo name=sitecore_master_index_sec > $SOLR_PATH/sitecore_master_index_sec/core.properties
 
 # Adding sitecore_suggested_test_index core
-RUN cp -af sitecore_suggested_test_index $SOLR_PATH/sitecore_suggested_test_index
+COPY sitecore_suggested_test_index $SOLR_PATH/sitecore_suggested_test_index
 #COPY schema.xml $SOLR_PATH/sitecore_fxm_master_index/conf/
 RUN echo name=sitecore_suggested_test_index > $SOLR_PATH/sitecore_suggested_test_index/core.properties
 
 # Adding sitecore_testing_index core
-RUN cp -af sitecore_testing_index $SOLR_PATH/sitecore_testing_index
+COPY sitecore_testing_index $SOLR_PATH/sitecore_testing_index
 #COPY schema.xml $SOLR_PATH/sitecore_testing_index/conf/
 RUN echo name=sitecore_testing_index > $SOLR_PATH/sitecore_testing_index/core.properties
 
 # Adding sitecore_web_index_sec core
-RUN cp -af sitecore_web_index_sec $SOLR_PATH/sitecore_web_index_sec
+COPY sitecore_web_index_sec $SOLR_PATH/sitecore_web_index_sec
 #COPY schema.xml $SOLR_PATH/sitecore_fxm_master_index/conf/
 RUN echo name=sitecore_web_index_sec > $SOLR_PATH/sitecore_web_index_sec/core.properties
 
 # Adding social_messages_master core
-RUN cp -af social_messages_master $SOLR_PATH/social_messages_master
+COPY social_messages_master $SOLR_PATH/social_messages_master
 #COPY schema.xml $SOLR_PATH/social_messages_master/conf/
 RUN echo name=social_messages_master > $SOLR_PATH/social_messages_master/core.properties
 
 # Adding social_messages_web core
-RUN cp -af social_messages_web $SOLR_PATH/social_messages_web
+COPY social_messages_web $SOLR_PATH/social_messages_web
 #COPY schema.xml $SOLR_PATH/sitecore_fxm_master_index/conf/
 RUN echo name=social_messages_web > $SOLR_PATH/social_messages_web/core.properties
 
